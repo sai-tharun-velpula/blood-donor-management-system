@@ -21,8 +21,8 @@ Blood Donor Management System is a centralized platform for managing blood donor
 - **Account Status Control** — Activate or deactivate donor accounts
 - **Admin Dashboard** — Overview of donor statistics and quick navigation
 - **Reports** — Blood group–wise and city-wise donor reports
-- **Authentication & Authorization** — Secure login with Forms Authentication and role-based access (Admin / Donor)
-- **Responsive UI** — MNC-style design that works across desktop, tablet, and mobile
+- **Authentication & Authorization** — Forms Authentication with role-based access for Admin and Donor users
+- **Responsive UI** — Responsive interface designed for desktop, laptop, tablet, and mobile devices
 
 ## 🛠️ Tech Stack
 
@@ -127,18 +127,28 @@ BloodDonorManagementSystem/
 
 ## 🗺️ Roadmap
 
-- [ ] Add unit and integration tests
-- [ ] Add email notifications for donor availability
-- [ ] Migrate to ASP.NET Core
-- [ ] Deploy a live demo
+- [x] Implement Admin and Donor authentication
+- [x] Implement role-based access control
+- [x] Implement donor registration and management
+- [x] Implement donor search and filtering
+- [x] Implement donor profile management
+- [x] Implement blood group and city-wise reports
+- [x] Implement responsive application UI
+- [x] Integrate SQL Server database
 
 ## 🔒 Security Notes
 
-For production deployment, additional hardening is recommended:
-- Strong password hashing
-- HTTPS enforcement
-- Secure connection string storage
-- Input validation and proper authorization checks
+The application includes basic security and access-control mechanisms for managing donor information:
+
+- **Forms Authentication** — Authenticated users are required to log in before accessing protected application pages
+- **Role-Based Access Control** — Admin and Donor users have different access permissions
+- **Session-Based Login State** — User authentication state is maintained during the session
+- **Password Protection** — Passwords are handled through the application's password helper functionality
+- **Authorization Checks** — Protected pages and administrative functions verify the user's authentication and role
+- **SQL Server Database** — Application data is stored in Microsoft SQL Server
+- **Logout Support** — Users can securely sign out of the application
+
+> ⚠️ This project is intended for educational and demonstration purposes. Additional security hardening is recommended before production deployment, including HTTPS enforcement, secure production credentials, protected connection strings, comprehensive input validation, and stronger production-grade authentication policies.
 
 ## 🤝 Contributing
 
