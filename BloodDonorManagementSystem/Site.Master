@@ -1,0 +1,471 @@
+<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Site.Master.cs"
+    Inherits="BloodDonorManagementSystem.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head runat="server">
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>
+
+        <asp:ContentPlaceHolder
+            ID="TitleContent"
+            runat="server">
+
+            BloodCare
+
+        </asp:ContentPlaceHolder>
+
+    </title>
+
+    <link
+        href="<%= ResolveUrl("~/Content/site.css") %>"
+        rel="stylesheet" />
+
+    <asp:ContentPlaceHolder
+        ID="HeadContent"
+        runat="server" />
+
+</head>
+
+
+<body>
+
+<form
+    id="form1"
+    runat="server">
+
+
+<div class="app-shell">
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                ♥
+            </div>
+
+            <div class="brand-title">
+
+                BloodCare
+
+                <small>
+                    Donor Management System
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ADMIN MENU
+             ================================================= -->
+
+        <asp:Panel
+            ID="pnlAdminMenu"
+            runat="server"
+            Visible="false">
+
+
+            <div class="nav-title">
+                Main Menu
+            </div>
+
+
+            <asp:HyperLink
+                ID="lnkDashboard"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/Dashboard.aspx">
+
+                <span class="nav-icon">
+                    ⌂
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </asp:HyperLink>
+
+
+            <asp:HyperLink
+                ID="lnkDonors"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/Donors.aspx">
+
+                <span class="nav-icon">
+                    ◉
+                </span>
+
+                <span>
+                    Donor Directory
+                </span>
+
+            </asp:HyperLink>
+
+
+            <asp:HyperLink
+                ID="lnkRegister"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/DonorRegistration.aspx">
+
+                <span class="nav-icon">
+                    ＋
+                </span>
+
+                <span>
+                    Register Donor
+                </span>
+
+            </asp:HyperLink>
+
+
+            <asp:HyperLink
+                ID="lnkReports"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/Reports.aspx">
+
+                <span class="nav-icon">
+                    ▥
+                </span>
+
+                <span>
+                    Reports &amp; Insights
+                </span>
+
+            </asp:HyperLink>
+
+
+            <div class="nav-title">
+                System
+            </div>
+
+
+        </asp:Panel>
+
+
+        <!-- =================================================
+             DONOR MENU
+             ================================================= -->
+
+        <asp:Panel
+            ID="pnlDonorMenu"
+            runat="server"
+            Visible="false">
+
+
+            <div class="nav-title">
+                Main Menu
+            </div>
+
+
+            <asp:HyperLink
+                ID="lnkDonorDashboard"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/DonorDashboard.aspx">
+
+                <span class="nav-icon">
+                    ⌂
+                </span>
+
+                <span>
+                    My Dashboard
+                </span>
+
+            </asp:HyperLink>
+
+
+            <asp:HyperLink
+                ID="lnkMyRegistration"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/DonorRegistration.aspx">
+
+                <span class="nav-icon">
+                    ♥
+                </span>
+
+                <span>
+                    My Donor Profile
+                </span>
+
+            </asp:HyperLink>
+
+
+            <asp:HyperLink
+                ID="lnkFindDonor"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/DonorSearch.aspx">
+
+                <span class="nav-icon">
+                    ⌕
+                </span>
+
+                <span>
+                    Find Blood Donor
+                </span>
+
+            </asp:HyperLink>
+
+
+            <asp:HyperLink
+                ID="lnkChangePassword"
+                runat="server"
+                CssClass="nav-link"
+                NavigateUrl="~/ChangePassword.aspx">
+
+                <span class="nav-icon">
+                    🔐
+                </span>
+
+                <span>
+                    Change Password
+                </span>
+
+            </asp:HyperLink>
+
+
+            <div class="nav-title">
+                Account
+            </div>
+
+
+        </asp:Panel>
+
+
+        <!-- =================================================
+             SIDEBAR BOTTOM
+             ================================================= -->
+
+        <div class="sidebar-bottom">
+
+
+            <div class="sidebar-security">
+
+                <span class="security-icon">
+                    ✓
+                </span>
+
+                <div>
+
+                    <strong>
+                        Secure workspace
+                    </strong>
+
+                    <small>
+                        Protected donor operations
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMPORTANT:
+                 HyperLink instead of LinkButton.
+                 No WebForms postback.
+            -->
+
+            <asp:HyperLink
+                ID="lnkLogout"
+                runat="server"
+                CssClass="nav-link nav-logout"
+                NavigateUrl="~/Logout.aspx">
+
+                <span class="nav-icon">
+                    ➜
+                </span>
+
+                <span>
+                    Sign Out
+                </span>
+
+            </asp:HyperLink>
+
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+
+                <button
+                    type="button"
+                    class="mobile-menu"
+                    onclick="toggleSidebar(); return false;">
+
+                    ☰
+
+                </button>
+
+
+                <div class="topbar-page">
+
+
+                    <div class="topbar-title">
+
+                        <asp:ContentPlaceHolder
+                            ID="PageTitleContent"
+                            runat="server">
+
+                            BloodCare
+
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+
+
+                    <div class="topbar-subtitle">
+
+                        Secure donor operations &amp;
+                        blood availability
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- USER AREA -->
+
+            <div class="user-area">
+
+
+                <div class="user-chip">
+
+
+                    <span class="avatar">
+
+                        <%= GetInitials() %>
+
+                    </span>
+
+
+                    <span class="user-meta">
+
+                        <strong>
+
+                            <%= Server.HtmlEncode(GetUserName()) %>
+
+                        </strong>
+
+
+                        <small>
+
+                            <%= Server.HtmlEncode(GetRoleName()) %>
+
+                        </small>
+
+
+                    </span>
+
+
+                </div>
+
+
+                <!-- IMPORTANT:
+                     HyperLink instead of LinkButton.
+                -->
+
+                <asp:HyperLink
+                    ID="btnTopLogout"
+                    runat="server"
+                    CssClass="top-logout"
+                    NavigateUrl="~/Logout.aspx">
+
+                    Logout
+
+                </asp:HyperLink>
+
+
+            </div>
+
+
+        </header>
+
+
+        <!-- CONTENT -->
+
+        <section class="content">
+
+            <asp:ContentPlaceHolder
+                ID="MainContent"
+                runat="server" />
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            <span>
+                ♥ BloodCare Donor Management System
+            </span>
+
+            <span>
+                ASP.NET Web Forms • C# • SQL Server
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+</form>
+
+
+<script
+    src="<%= ResolveUrl("~/Content/site.js") %>">
+</script>
+
+
+</body>
+
+</html>

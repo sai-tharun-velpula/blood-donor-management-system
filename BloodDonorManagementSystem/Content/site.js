@@ -1,0 +1,1 @@
+function toggleSidebar(){var el=document.getElementById('sidebar');if(el){el.classList.toggle('sidebar-open');}}
