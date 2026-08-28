@@ -1,476 +1,154 @@
 # Blood Donor Management System
 
-A web-based Blood Donor Management System developed using **ASP.NET Web Forms**, **C#**, **ADO.NET**, **.NET Framework 4.8**, and **SQL Server**.
+A web-based Blood Donor Management System built with **ASP.NET Web Forms**, **C#**, **ADO.NET**, **.NET Framework 4.8**, and **Microsoft SQL Server**. Designed to streamline blood donor registration, search, and reporting through a secure, role-based interface for administrators and donors.
 
-The system is designed to manage blood donors, donor accounts, blood groups, availability, reports, and administrative operations through a role-based interface.
+![.NET Framework](https://img.shields.io/badge/.NET%20Framework-4.8-512BD4?logo=dotnet)
+![C#](https://img.shields.io/badge/C%23-239120?logo=c-sharp&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?logo=microsoftsqlserver&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
-## Technology Stack
+## 📌 Overview
 
-- ASP.NET Web Forms
-- C#
+Blood Donor Management System is a centralized platform for managing blood donor records. It replaces manual donor tracking with a secure web application that handles donor registration, search and filtering, availability tracking, and reporting — with role-based access for administrators and donors.
+
+## ✨ Features
+
+- **Donor Registration** — Capture full donor details including blood group, contact, and address
+- **Donor Directory** — Search and filter donors by name, mobile, email, blood group, city, state, and availability
+- **Donor Profile Management** — Edit and update donor information
+- **Account Status Control** — Activate or deactivate donor accounts
+- **Admin Dashboard** — Overview of donor statistics and quick navigation
+- **Reports** — Blood group–wise and city-wise donor reports
+- **Authentication & Authorization** — Secure login with Forms Authentication and role-based access (Admin / Donor)
+- **Responsive UI** — MNC-style design that works across desktop, tablet, and mobile
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Backend | ASP.NET Web Forms, C# |
+| Data Access | ADO.NET |
+| Database | Microsoft SQL Server / LocalDB |
+| Frontend | HTML5, CSS3, JavaScript |
+| IDE | Visual Studio 2019 |
+
+## 🏗️ Project Structure
+```text
+BloodDonorManagementSystem/
+│
+├── App_Data/
+│   └── BloodDonorManagement.sql       # SQL Server database setup script
+│
+├── Content/
+│   ├── site.css                       # Application styling and responsive UI
+│   └── site.js                        # Client-side JavaScript
+│
+├── Infrastructure/
+│   ├── AuthHelper.cs                  # Authentication and role handling
+│   ├── Db.cs                          # Database connection and data access
+│   └── PasswordHelper.cs              # Password hashing and verification
+│
+├── Models/
+│   └── Donor.cs                       # Donor data model
+│
+├── Login.aspx                         # User login
+├── Dashboard.aspx                     # Admin dashboard
+├── DonorDashboard.aspx                # Donor dashboard
+├── DonorRegistration.aspx             # Donor registration
+├── DonorSearch.aspx                   # Donor search
+├── Donors.aspx                        # Donor directory and management
+├── Reports.aspx                       # Blood group and city reports
+├── ChangePassword.aspx                # Password change
+├── Logout.aspx                        # Sign out
+│
+├── Site.Master                        # Shared application layout
+├── Global.asax                        # Application-level configuration
+├── Web.config                         # Application and database configuration
+│
+├── BloodDonorManagementSystem.csproj  # Project file
+└── BloodDonorManagementSystem.sln     # Visual Studio solution
+```
+
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Visual Studio 2019 or later
 - .NET Framework 4.8
-- ADO.NET
-- SQL Server / LocalDB
-- HTML5
-- CSS3
-- JavaScript
-- Visual Studio 2019
-
----
-
-## Main Features
-
-- Secure login and logout
-- Role-based access
-- Admin dashboard
-- Donor dashboard
-- Donor registration
-- Donor profile management
-- Donor directory
-- Donor search and filtering
-- Blood group filtering
-- City and state filtering
-- Donor availability filtering
-- Donor account activation/deactivation
-- Donor details view
-- Donor edit functionality
-- Donor delete functionality
-- Delete confirmation
-- Blood group reports
-- City-wise reports
-- Dashboard donor statistics
-- Responsive MNC-style user interface
-- Desktop, laptop, tablet and mobile layouts
-- SQL Server database integration
-- Sample donor records
-- Forms Authentication
-- Session-based login state
-
----
-
-# Role-Based Functionality
-
-## 1. Admin
-
-The Admin has access to the complete donor management system.
-
-### Admin Login
-
-The Admin can:
+- SQL Server or SQL Server Express (LocalDB)
 
-- Login using administrator credentials
-- Access the Admin Dashboard
-- Logout securely
-- Access administrative donor management features
+### Installation
 
-### Admin Dashboard
+1. **Clone the repository**
+```bash
+   git clone https://github.com/sai-tharun-velpula/blood-donor-management-system.git
+```
 
-The dashboard provides an overview of the donor system, including donor statistics and management information.
+2. **Open the solution**
 
-Admin can navigate to:
+   Open `BloodDonorManagementSystem.sln` in Visual Studio.
 
-- Dashboard
-- Donor Directory
-- Donor Registration
-- Reports
-- Other available administrative functions
+3. **Restore NuGet packages** if prompted.
 
-### Donor Management
+4. **Set up the database**
 
-Admin can:
+   Run the script at:BloodDonorManagementSystem/App_Data/BloodDonorManagement.sql    This creates the required tables and inserts sample donor records.
 
-- Register a new donor
-- View registered donors
-- Search donors
-- Filter donors
-- View complete donor details
-- Edit donor information
-- Delete donor records
-- Activate donor accounts
-- Deactivate donor accounts
+5. **Configure the connection string**
 
-### Donor Directory
+   Update `Web.config` if you're not using the default LocalDB instance:
+```xml
+   <connectionStrings>
+  <add name="BloodDonorDb"
+       connectionString="Server=.;Database=BloodDonorDB;Trusted_Connection=True;TrustServerCertificate=True"
+       providerName="System.Data.SqlClient" />
+</connectionStrings>
+```
 
-The Admin Donor Directory supports searching and filtering by:
+6. **Run the application**
 
-- Donor name
-- Mobile number
-- Email
-- Blood group
-- City
-- State
-- Availability
+   Press `F5` or `Ctrl+F5` in Visual Studio.
 
-The directory displays donor information such as:
+## 🔐 Default Login (Demo Only)
 
-- Donor name
-- Blood group
-- Mobile
-- Email
-- City
-- State
-- Age
-- Donation availability
-- Account status
-- Actions
+| Field | Value |
+|---|---|
+| Username | `admin` |
+| Password | `Admin@123` |
 
-Available actions include:
+> ⚠️ These credentials are for development/demo purposes only. Change them before any production deployment.
 
-- Edit
-- View
-- Toggle account status
+## 📸 Screenshots
 
-### Donor Details
+> _Add screenshots of the dashboard, donor directory, and login page here to give visitors a quick visual tour._
 
-Admin can view detailed donor information including:
+## 🗺️ Roadmap
 
-- Donor ID
-- Full name
-- Blood group
-- Gender
-- Date of birth
-- Age
-- Mobile
-- Email
-- City
-- State
-- Pincode
-- Address
-- Availability
+- [ ] Add unit and integration tests
+- [ ] Add email notifications for donor availability
+- [ ] Migrate to ASP.NET Core
+- [ ] Deploy a live demo
 
-### Donor Account Status
+## 🔒 Security Notes
 
-Admin can manage donor account status.
-
-Accounts can be:
-
-- Active
-- Inactive
-
-The directory visually displays the current account status.
-
-### Donor Delete
-
-Admin can delete donor records.
-
-A confirmation step is provided before deletion to help prevent accidental deletion.
-
----
-
-# 2. Donor
-
-The Donor role is intended for registered blood donors.
-
-Donor functionality includes access to their donor-related information and the donor-facing features implemented in the project.
-
-Depending on the configured account permissions, donors can:
-
-- Login
-- Access the donor dashboard
-- View their donor information
-- Manage their donor profile
-- Check their blood group
-- Check their availability information
-- Logout
-
----
-
-# Authentication
-
-The application uses ASP.NET Forms Authentication for login management.
-
-The login flow includes:
-
-1. User enters username and password.
-2. Credentials are checked against the database.
-3. A successful login displays a success message.
-4. The login process continues through the configured authentication flow.
-5. The user is redirected to the appropriate dashboard based on their role.
-6. Logged-in users cannot access pages intended for unauthenticated users.
-
-The application also checks whether a user is already logged in before displaying the login page.
-
----
-
-# Dashboard
-
-The dashboard provides a central overview of the system.
-
-It is designed to display donor-related statistics and provide quick navigation to important modules.
-
-Typical dashboard functionality includes:
-
-- Total donors
-- Available donors
-- Blood group information
-- Donor management navigation
-- Reports navigation
-
----
-
-# Donor Registration
-
-The donor registration module allows authorized users to create donor records.
-
-Donor information includes:
-
-- Full name
-- Blood group
-- Gender
-- Date of birth
-- Mobile number
-- Email
-- Address
-- City
-- State
-- Pincode
-- Availability information
-
-Registered donor records are stored in SQL Server.
-
----
-
-# Donor Search
-
-The Donor Directory provides multiple search and filtering options.
-
-### Search
-
-Users can search using:
-
-- Donor name
-- Mobile number
-- Email
-
-### Filters
-
-Available filters include:
-
-- Blood group
-- City
-- State
-- Availability
-
-A Clear option is also available to reset the search filters.
-
----
-
-# Reports
-
-The project includes donor reporting functionality.
-
-Available reports include:
-
-## Blood Group Report
-
-Provides donor information grouped or summarized according to blood group.
-
-Blood groups supported include:
-
-- A+
-- A-
-- B+
-- B-
-- AB+
-- AB-
-- O+
-- O-
-
-## City Report
-
-Provides donor information based on donor city/location.
-
-These reports help administrators understand donor distribution and availability.
-
----
-
-# User Interface
-
-The application uses a responsive, professional MNC-style design.
-
-The UI has been designed for:
-
-- Desktop
-- Laptop
-- Tablet
-- Mobile
-
-The project includes reusable styling for:
-
-- Cards
-- Forms
-- Buttons
-- Tables
-- Search filters
-- Status badges
-- Dashboard sections
-- Empty states
-- Detail panels
-- Responsive layouts
-
-The Donor Directory table also uses consistent typography and styling across donor fields.
-
----
-
-# Database
-
-The application uses SQL Server for persistent data storage.
-
-The database contains the main application data required for authentication and donor management.
-
-Main database objects include:
-
-- `Users`
-- `Donors`
-
-The database setup script is included in the project.
-
----
-
-# Database Setup
-
-1. Open SQL Server Management Studio or SQL Server Object Explorer.
-
-2. Open:
-
-`BloodDonorManagementSystem/BloodDonorManagementSystem/App_Data/BloodDonorManagement.sql`
-
-3. Execute the SQL script.
-
-4. The script creates the required database and tables.
-
-5. Sample records are also inserted for testing.
-
-6. Check the connection string in `Web.config`.
-
-The default project connection uses:
-
-`(localdb)\MSSQLLocalDB`
-
-If a different SQL Server instance is being used, update the `BloodDonorDb` connection string in `Web.config`.
-
----
-
-# Project Structure
-
-The project follows an organized ASP.NET Web Forms structure.
-
-Important components include:
-
-- `Login.aspx` - Login page
-- `Dashboard.aspx` - Dashboard
-- `Donors.aspx` - Donor Directory
-- `DonorRegistration.aspx` - Donor registration
-- `Reports.aspx` - Reports
-- `Site.Master` - Common application layout
-- `Web.config` - Application configuration and connection string
-- `App_Data/BloodDonorManagement.sql` - Database setup script
-- `Infrastructure` - Authentication and supporting application utilities
-
----
-
-# Development Environment
-
-Recommended environment:
-
-- Visual Studio 2019
-- .NET Framework 4.8
-- SQL Server / LocalDB
-- SQL Server Management Studio
-
-Open the solution file:
-
-`BloodDonorManagementSystem.sln`
-
----
-
-# How to Run
-
-1. Clone or download the repository.
-
-2. Open:
-
-`BloodDonorManagementSystem.sln`
-
-in **Visual Studio 2019**.
-
-3. Restore NuGet packages if Visual Studio requests it.
-
-4. Configure the SQL Server connection string in `Web.config`.
-
-5. Execute the database script:
-
-`App_Data/BloodDonorManagement.sql`
-
-6. Build the solution.
-
-7. Run the application using:
-
-- `F5`
-- or `Ctrl + F5`
-
-8. Login using the configured account.
-
-9. Use the dashboard to access the available modules.
-
----
-
-# Default Admin Login
-
-For the project/demo environment:
-
-**Username**
-
-`admin`
-
-**Password**
-
-`Admin@123`
-
-> This credential is intended for development/demo use. The password implementation and credentials should be changed before production deployment.
-
----
-
-# Security Notes
-
-The project includes authentication and access control for the application.
-
-For production deployment, additional security hardening should be performed, including:
-
+For production deployment, additional hardening is recommended:
 - Strong password hashing
-- Secure password storage
-- HTTPS
-- Production database credentials
-- Connection string protection
-- Input validation
-- Proper authorization checks
-- Secure session configuration
-- Error handling and logging
+- HTTPS enforcement
+- Secure connection string storage
+- Input validation and proper authorization checks
 
----
+## 🤝 Contributing
 
-# Project Status
+Contributions, issues, and feature requests are welcome. Feel free to check the [issues page](../../issues) or open a pull request.
 
-The project currently includes the core Blood Donor Management System functionality:
+## 📄 License
 
-- Authentication
-- Role-based navigation
-- Dashboard
-- Donor registration
-- Donor directory
-- Donor search and filtering
-- Donor details
-- Donor editing
-- Donor deletion
-- Account activation/deactivation
-- Reports
-- SQL Server integration
-- Responsive UI
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
----
+## 👤 Author
 
-# License
-
-This project is developed for educational/project demonstration purposes.
+**Sai Tharun Velpula**
+- GitHub: [@sai-tharun-velpula](https://github.com/sai-tharun-velpula)
