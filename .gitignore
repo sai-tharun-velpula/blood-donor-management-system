@@ -1,0 +1,6 @@
+.vs/
+BloodDonorManagementSystem/bin/
+BloodDonorManagementSystem/obj/
+packages/
+*.suo
+*.user
