@@ -125,11 +125,11 @@ BloodDonorManagementSystem/
 
 ### 🔐 Login
 
-<img src="BloodDonorManagementSystem/Screenshots/login.png" alt="Login" width="500">
+<img src="BloodDonorManagementSystem/Screenshots/login.png" alt="Login" width="400">
 
 ### ⚠️ Inactive Account
 
-<img src="BloodDonorManagementSystem/Screenshots/inactive-account.png" alt="Inactive Account" width="500">
+<img src="BloodDonorManagementSystem/Screenshots/inactive-account.png" alt="Inactive Account" width="400">
 
 ---
 
@@ -151,15 +151,15 @@ BloodDonorManagementSystem/
 
 ### ➕ Register Donor
 
-<img src="BloodDonorManagementSystem/Screenshots/admin-register-donor.png" alt="Register Donor" width="500">
+<img src="BloodDonorManagementSystem/Screenshots/admin-register-donor.png" alt="Register Donor" width="400">
 
 ### 📈 Reports
 
-<img src="BloodDonorManagementSystem/Screenshots/admin-reports.png" alt="Admin Reports" width="500">
+<img src="BloodDonorManagementSystem/Screenshots/admin-reports.png" alt="Admin Reports" width="400">
 
 ### ✏️ Update Donor Profile
 
-<img src="BloodDonorManagementSystem/Screenshots/admin-update-donor-profile.png" alt="Admin Update Donor Profile" width="500">
+<img src="BloodDonorManagementSystem/Screenshots/admin-update-donor-profile.png" alt="Admin Update Donor Profile" width="400">
 
 ---
 
@@ -174,15 +174,15 @@ BloodDonorManagementSystem/
 
 ### 🔍 Donor Search
 
-<img src="BloodDonorManagementSystem/Screenshots/donor-search-filters.png" alt="Donor Search Filters" width="500">
+<img src="BloodDonorManagementSystem/Screenshots/donor-search-filters.png" alt="Donor Search Filters" width="400">
 
 ### 👤 Update Own Profile
 
-<img src="BloodDonorManagementSystem/Screenshots/donor-update-profile.png" alt="Donor Update Own Profile" width="500">
+<img src="BloodDonorManagementSystem/Screenshots/donor-update-profile.png" alt="Donor Update Own Profile" width="400">
 
 ### 🔑 Change Password
 
-<img src="BloodDonorManagementSystem/Screenshots/donor-change-password.png" alt="Change Password" width="500">
+<img src="BloodDonorManagementSystem/Screenshots/donor-change-password.png" alt="Change Password" width="400">
 
 ## 🗺️ Roadmap
 
