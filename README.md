@@ -195,7 +195,7 @@ The application includes basic security and access-control mechanisms for managi
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome. Feel free to check the [issues page](../../issues) or open a pull request.
+Contributions, issues, and feature requests are welcome. Feel free to check the [issues page](https://github.com/sai-tharun-velpula/blood-donor-management-system/issues) or open a pull request.
 
 ## 📄 License
 
