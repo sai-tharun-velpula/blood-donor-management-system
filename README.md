@@ -123,7 +123,54 @@ BloodDonorManagementSystem/
 
 ## 📸 Screenshots
 
-> _Add screenshots of the dashboard, donor directory, and login page here to give visitors a quick visual tour._
+### 🔐 Login
+
+<img src="BloodDonorManagementSystem/Screenshots/login.png" alt="Login" width="600">
+
+### 👨‍💼 Admin Dashboard
+
+<img src="BloodDonorManagementSystem/Screenshots/admin-dashboard.png" alt="Admin Dashboard" width="600">
+
+<img src="BloodDonorManagementSystem/Screenshots/admin-dashboard-overview.png" alt="Admin Dashboard Overview" width="600">
+
+### 🩸 Donor Directory
+
+<img src="BloodDonorManagementSystem/Screenshots/admin-donor-directory.png" alt="Admin Donor Directory" width="600">
+<img src="BloodDonorManagementSystem/Screenshots/admin-donor-details.png" alt="Donor Details" width="600">
+
+### ➕ Register Donor
+
+<img src="BloodDonorManagementSystem/Screenshots/admin-register-donor.png" alt="Register Donor" width="600">
+
+### 📈 Admin Reports
+
+<img src="BloodDonorManagementSystem/Screenshots/admin-reports.png" alt="Admin Reports" width="600">
+
+### ✏️ Admin Update Donor Profile
+
+<img src="BloodDonorManagementSystem/Screenshots/admin-update-donor-profile.png" alt="Admin Update Donor Profile" width="600">
+
+### 🧑‍🩸 Donor Dashboard
+
+<img src="BloodDonorManagementSystem/Screenshots/donor-dashboard.png" alt="Donor Dashboard" width="600">
+
+<img src="BloodDonorManagementSystem/Screenshots/donor-dashboard-overview.png" alt="Donor Dashboard Overview" width="600">
+
+### 🔎 Find Donor
+
+<img src="BloodDonorManagementSystem/Screenshots/donor-find-donor.png" alt="Find Donor" width="600">
+
+### 🔍 Donor Search Filters
+
+<img src="BloodDonorManagementSystem/Screenshots/donor-search-filters.png" alt="Donor Search Filters" width="600">
+
+### 👤 Donor Update Own Profile
+
+<img src="BloodDonorManagementSystem/Screenshots/donor-update-profile.png" alt="Donor Update Own Profile" width="600">
+
+### 🔑 Change Password
+
+<img src="BloodDonorManagementSystem/Screenshots/donor-change-password.png" alt="Change Password" width="600">
 
 ## 🗺️ Roadmap
 
