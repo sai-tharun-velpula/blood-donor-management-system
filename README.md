@@ -156,10 +156,6 @@ BloodDonorManagementSystem/
 
 <img src="BloodDonorManagementSystem/Screenshots/donor-dashboard-overview.png" alt="Donor Dashboard Overview" width="600">
 
-### 🔎 Find Donor
-
-<img src="BloodDonorManagementSystem/Screenshots/donor-find-donor.png" alt="Find Donor" width="600">
-
 ### 🔍 Donor Search Filters
 
 <img src="BloodDonorManagementSystem/Screenshots/donor-search-filters.png" alt="Donor Search Filters" width="600">
